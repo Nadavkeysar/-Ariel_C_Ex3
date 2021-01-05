@@ -8,7 +8,7 @@
 // getting the length of a word
 int word_length(char* s) {
     for(int length = 0; length < MAX_WORD_SIZE; ++length) {
-        if(*(s + length) == ' ' || *(s + length) == '\n' || *(s + length) == '\t' || *(s + length) == '\r' || *(s + length) == '\0') {
+        if(*(s + length) == ' ' || *(s + length) == '\n' || *(s + length) == '\t' || *(s + length) == '\0') {
             return length;
         }
     }
@@ -83,7 +83,7 @@ void print_line(char word[], int len) {
         int line = line_length(text);
         for (int i = 0; i < line; ++i) {
             if(similar(word,text, i, len)){
-                printf(" %s\n", text);
+                printf(" %s", text);
                 break;
             }
             i += word_length(text+i);
